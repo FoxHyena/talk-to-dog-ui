@@ -1,26 +1,36 @@
 <script setup lang="ts">
-defineProps<{
-  header: string
-  text: string
-}>()
+withDefaults(
+  defineProps<{
+    header: string
+    text?: string
+    fontColor?: string
+  }>(),
+  {
+    fontColor: 'black'
+  }
+)
 </script>
 
 <template>
-  <div class="customBlock">
+  <div class="customBlock" :style="{ color: fontColor }">
     <!-- <slot /> -->
     <h1 class="header">{{ header }}</h1>
-    <div>{{ text }}</div>
+    <div class="text">{{ text }}</div>
+    <slot />
   </div>
 </template>
 
 <style scoped>
 .header {
-  font-size: 1.3em;
+  font-size: 1.4em;
+}
+
+.text {
+  font-size: 1.1em;
 }
 .customBlock {
   width: 80%;
   max-width: 500px;
-  /* background-color: #00b4d8; */
   margin: 10px auto 10px auto;
   border-radius: 5px;
   padding: 10px;

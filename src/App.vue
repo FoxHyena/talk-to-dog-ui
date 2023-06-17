@@ -21,13 +21,6 @@ import { RouterLink, RouterView } from 'vue-router'
 </template>
 
 <style scoped>
-@media only screen and (max-width: 60000px) {
-  .navBar {
-    justify-content: center;
-    flex-direction: column;
-  }
-}
-
 .phone {
   height: 0.6em;
   fill: white;
@@ -61,6 +54,8 @@ import { RouterLink, RouterView } from 'vue-router'
   display: flex;
   align-items: center;
   height: 120px;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .talkToDogText {
