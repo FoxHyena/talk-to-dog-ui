@@ -5,12 +5,8 @@ import { RouterLink, RouterView } from 'vue-router'
 <template>
   <body>
     <div class="navBar">
-      <!-- <div class="navBar">
-        awdadawdaw
-       </div> -->
-
       <div class="talkToDogText">
-        <img src="@/assets/phone-icon.svg" alt="Phone icon" class="phone" /> TALK TO DOG
+        <img src="@/assets/phone-icon.svg" alt="Phone icon" class="phone" />TALK TO DOG
       </div>
       <div class="routerLinks">
         <ul>
@@ -25,20 +21,16 @@ import { RouterLink, RouterView } from 'vue-router'
 </template>
 
 <style scoped>
-@media only screen and (max-width: 60000px) {
-  .navBar {
-    justify-content: center;
-    flex-direction: column;
-  }
-}
-
 .phone {
   height: 0.6em;
+  fill: white;
+  float: left;
 }
 
 .routerLinks a.router-link-active,
 .routerLinks a.router-link-exact-active {
-  color: black;
+  color: white;
+  border-bottom: 2px solid white;
 }
 
 .routerLinks li {
@@ -49,7 +41,7 @@ import { RouterLink, RouterView } from 'vue-router'
 
 .routerLinks a {
   text-decoration: none;
-  color: rgb(62, 62, 62);
+  color: #90e0ef;
 }
 
 .routerLinks ul {
@@ -57,16 +49,23 @@ import { RouterLink, RouterView } from 'vue-router'
   margin: 0;
 }
 .navBar {
-  background-color: #968181;
+  background-color: #0096c7;
   margin: 20;
   display: flex;
   align-items: center;
-  height: 100px;
+  height: 120px;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .talkToDogText {
   font-family: 'Picnic';
-  font-size: 3em;
+  font-size: 3rem;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
 }
 
 .routerLinks {
